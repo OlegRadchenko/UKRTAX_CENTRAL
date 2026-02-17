@@ -1,0 +1,16 @@
+﻿CREATE TABLE [ukrtax].[level1_keys]
+(
+	[DataSetRow] INT REFERENCES store.DataSetRow(Id) NOT NULL,
+	[Key1] INT NOT NULL,
+	[_Status] TINYINT NOT NULL REFERENCES mca.status(Id) DEFAULT 1,
+	[CHANGE_SESSION] [int] NOT NULL REFERENCES mca.session(ID) DEFAULT mca.DefaultSession(),
+	[SysStart] DATETIME2 (7) GENERATED ALWAYS AS ROW START NOT NULL,
+	[SysEnd] DATETIME2 (7) GENERATED ALWAYS AS ROW END NOT NULL, 
+    PRIMARY KEY ([DataSetRow]), 
+	PERIOD FOR SYSTEM_TIME ([SysStart], [SysEnd])
+)
+WITH (SYSTEM_VERSIONING = ON(HISTORY_TABLE=[ukrtax].[level1_keys_HISTORY], DATA_CONSISTENCY_CHECK=ON))
+GO
+
+CREATE UNIQUE INDEX [IX_level1_Keys] ON [ukrtax].[level1_keys] ([Key1])
+GO

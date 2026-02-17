@@ -1,0 +1,30 @@
+﻿CREATE TABLE [ukrtax].[OLDCHANGESLOG]
+(
+	[DataSetRow] INT REFERENCES store.DataSetRow(Id) NOT NULL,
+    [IDMNGUNIT] INT           NOT NULL,
+    [SERIALID]  INT           NOT NULL,
+    [LAYER]     VARCHAR (80)  NOT NULL,
+    [ID]        NTEXT         NOT NULL,
+    [MODE]      INT           NOT NULL,
+    [ATTRIBUTE] VARCHAR (64)  NULL,
+    [OLDVALUE]  NVARCHAR (60) NULL,
+    [NEWVALUE]  NVARCHAR (60) NULL,
+    [EDIT_DATE] DATETIME      NOT NULL,
+    [STATUS]                  VARCHAR (15)    NOT NULL,
+    [MISCATTRIB]              INT             NULL,
+    [TEXTMESSAGE]             NTEXT           NULL,
+    [DATA]                    VARBINARY (MAX) NULL,
+    [PARAMETERS]              NTEXT           NULL,
+    [MAILINGLIST]             NTEXT           NULL,
+	[_Status] TINYINT NOT NULL REFERENCES mca.status(Id) DEFAULT 1,
+	[CHANGE_SESSION] [int] NOT NULL REFERENCES mca.session(ID) DEFAULT mca.DefaultSession(),
+	[SysStart] DATETIME2 (7) GENERATED ALWAYS AS ROW START NOT NULL,
+	[SysEnd] DATETIME2 (7) GENERATED ALWAYS AS ROW END NOT NULL,
+    PRIMARY KEY ([DataSetRow]), 
+	PERIOD FOR SYSTEM_TIME ([SysStart], [SysEnd])
+)
+WITH (SYSTEM_VERSIONING = ON(HISTORY_TABLE=[ukrtax].[OLDCHANGESLOG_HISTORY], DATA_CONSISTENCY_CHECK=ON))
+GO
+
+CREATE UNIQUE INDEX [IX_OLDCHANGESLOG_Keys] ON [ukrtax].[OLDCHANGESLOG] ([IDMNGUNIT], [SERIALID])
+GO

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+    <DefaultCollation>Ukrainian_CI_AS</DefaultCollation>
+    <AssemblyOwner>dbo</AssemblyOwner>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>UAFMDR</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b782ab65-a41d-474c-bf56-046afd9c77ba}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath />
+    <RootNamespace>UAFMDR</RootNamespace>
+    <AssemblyName>UAFMDR</AssemblyName>
+    <ModelCollation>1058,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Schemas" />
+    <Folder Include="Segments" />
+    <Folder Include="Segments\ds" />
+    <Folder Include="Segments\ds\Stored Procedures" />
+    <Folder Include="Segments\ds\Tables" />
+    <Folder Include="Segments\ds\Triggers" />
+    <Folder Include="Segments\ds\XML" />
+    <Folder Include="Segments\mca" />
+    <Folder Include="Segments\mca\Tables" />
+    <Folder Include="Segments\mca\XML" />
+    <Folder Include="Segments\ukrtax" />
+    <Folder Include="Segments\ukrtax\Stored Procedures" />
+    <Folder Include="Segments\ukrtax\Tables" />
+    <Folder Include="Segments\mca\Functions" />
+    <Folder Include="Segments\ds\Tables\Mapping" />
+    <Folder Include="Segments\ds\Tables\Store" />
+    <Folder Include="Segments\ukrtax\Tables\Direct" />
+    <Folder Include="Segments\ds\Functions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Segments\ds\Stored Procedures\UAFMDRHelper.cs" />
+    <Compile Include="Segments\ukrtax\Stored Procedures\ukrtax_update_app_structure.cs" />
+    <Compile Include="Segments\ukrtax\Stored Procedures\UKRTAXHelper.cs" />
+    <Compile Include="Segments\ukrtax\Stored Procedures\ukrtax_update_relations.cs" />
+    <Compile Include="Segments\ukrtax\Stored Procedures\UpdateUKRTAXTable.cs" />
+    <Compile Include="Segments\ds\Functions\SelectDataForDataset.cs" />
+    <Compile Include="Segments\ukrtax\Stored Procedures\ukrtax_import_fm_database.cs" />
+    <Compile Include="Segments\ukrtax\Stored Procedures\ukrtax_export_data.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schemas\ds.sql" />
+    <Build Include="Schemas\store.sql" />
+    <Build Include="Schemas\ukrtax.sql" />
+    <Build Include="Segments\mca\Tables\channel.sql" />
+    <Build Include="Segments\mca\Tables\doer.sql" />
+    <Build Include="Segments\mca\Tables\session.sql" />
+    <Build Include="Segments\mca\Tables\status.sql" />
+    <Build Include="Schemas\mca.sql" />
+    <Build Include="Segments\mca\Functions\DefaultSession.sql" />
+    <Build Include="Segments\ds\Tables\ds.application.sql" />
+    <Build Include="Segments\ds\Tables\ds.dataset.sql" />
+    <Build Include="Segments\ds\Tables\ds.element.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetRow.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetRowRelation.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValue.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueBIGINT.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueDATE.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueDATETIME.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueFLOAT.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueINT.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueNVARCHAR_MAX.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueNVARCHAR_MIDDLE.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueNVARCHAR_SHORT.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueSMALLINT.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueVARBINARY_MAX.sql" />
+    <Build Include="Segments\ukrtax\Tables\ukrtax.level1_keys.sql" />
+    <Build Include="Segments\ukrtax\Tables\ukrtax.level2_keys.sql" />
+    <Build Include="Segments\ukrtax\Tables\ukrtax.level3_keys.sql" />
+    <Build Include="Segments\ukrtax\Tables\ukrtax.level4_keys.sql" />
+    <Build Include="Segments\ukrtax\Tables\ukrtax.level5_keys.sql" />
+    <Build Include="Segments\ukrtax\Tables\ukrtax.LoggingFieldSet.sql" />
+    <Build Include="Segments\ukrtax\Tables\Direct\ukrtax.DELETEDRECORDSLOG.sql" />
+    <Build Include="Segments\ukrtax\Tables\Direct\ukrtax.GEOMETRY_COLUMNS.sql" />
+    <Build Include="Segments\ukrtax\Tables\Direct\ukrtax.JOURNAL.sql" />
+    <Build Include="Segments\ukrtax\Tables\Direct\ukrtax.MEASUREMENTLOG.sql" />
+    <Build Include="Segments\ukrtax\Tables\Direct\ukrtax.OLDCHANGESLOG.sql" />
+    <Build Include="Segments\ukrtax\Tables\Direct\ukrtax.SYNCHROLOG.sql" />
+    <Build Include="Segments\ukrtax\Tables\Direct\ukrtax.SYSTEMFILES.sql" />
+    <Build Include="Segments\ds\Tables\Store\store.DataSetValueGEOGRAPHY.sql" />
+    <Build Include="Segments\mca\Tables\defaults.sql" />
+    <Build Include="Segments\mca\Functions\GetDefault.sql" />
+    <Build Include="Segments\ds\Tables\Mapping\ds.Mapping.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="UAFMDR.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test.sql" />
+    <None Include="Segments\ds\XML\UKRTAX_hierarhy.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="UAFMDR">
+      <DefaultValue>UAFMDR</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+</Project>

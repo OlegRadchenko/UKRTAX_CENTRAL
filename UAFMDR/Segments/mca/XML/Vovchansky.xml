@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Doer>
+  <Name>
+    <First>Володимир</First>
+    <Last>Вовчанський</Last>
+  </Name>
+  <Organization>ВО Держліспроект</Organization>
+  <Position>Начальник відділу нових інформаційних технологій</Position>
+  <Channels>
+    <Name>Microsoft SQL Server Management Studio</Name>
+    <Name>Field-Map Data Collector</Name>
+  </Channels>
+</Doer>

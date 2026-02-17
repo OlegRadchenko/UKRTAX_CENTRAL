@@ -1,0 +1,248 @@
+<application name="UKRTAX">
+    <section name="Data">
+        <dataset name="MNGUNIT">
+                <dataset name="LABELLINE" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="BORDERLINE" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="CADASTER" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="CADASTERLINE" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="CARTOLINE" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="CONNECTION" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="DEM" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="EXTLINE" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="GPSREFERENCEPOINTS" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="GRID" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="LABELLINE" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="LABELPOINT" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="LAYERCUT" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="LINE" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="OLDLINE" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="PHOTOPOINT" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="PM01" link="IDMNGUNIT = MNGUNIT.ID">
+                    <dataset name="PM10" link="IDMNGUNIT = PM01.IDMNGUNIT AND IDPM01 = PM01.ID">
+                        <dataset name="PM10A" link="IDMNGUNIT = PM10.IDMNGUNIT AND IDPM01 = PM10.IDPM01 AND IDPM10 = PM10.ID"/>
+                    </dataset>
+                </dataset>
+                <dataset name="PROTECTIONLINE" link="IDMNGUNIT = MNGUNIT.ID" />
+                <dataset name="REFERENCEPOINTS" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="SPARELINE" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="SPAREPOLYGON" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="SURVAYPOLYGON" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="SURVEYLINE" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="SYSTAB_DELETEDRECORDSLOG" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="SYSTAB_MEASUREMENTLOG" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="SYSTAB_OLDCHANGESLOG" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="TRACKINGLINE" link="IDMNGUNIT = MNGUNIT.ID"/>
+                <dataset name="M00" link="IDMNGUNIT = MNGUNIT.ID">
+                    <dataset name="M00KAKL" link="IDMNGUNIT = M00.IDMNGUNIT AND IDM00 = M00.ID"/>
+                </dataset>
+                <dataset name="M01" link="IDMNGUNIT = MNGUNIT.ID">
+                    <dataset name="M02" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M03" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M04" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M05" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M06" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M07" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M08" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M09" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M10" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID">
+                        <dataset name="M10A" link="IDMNGUNIT = M10.IDMNGUNIT AND IDM01 = M10.IDM01 AND IDM10 = M10.ID"/>
+                        <dataset name="RELASCOPE" link="IDMNGUNIT = M10.IDMNGUNIT AND IDM01 = M10.IDM01 AND IDM10 = M10.ID">
+                            <dataset name="RELASCOPEPLOTS" link="IDMNGUNIT = RELASCOPE.IDMNGUNIT AND IDM01 = RELASCOPE.IDM01 AND IDM10 = RELASCOPE.IDM10 AND IDRELASCOPE = RELASCOPE.ID">
+                                <dataset name="RELASCOPESPEC" link="IDMNGUNIT = RELASCOPEPLOTS.IDMNGUNIT AND IDM01 = RELASCOPEPLOTS.IDM01 AND IDM10 = RELASCOPE.IDM10 AND IDRELASCOPE = RELASCOPEPLOTS.IDRELASCOPE AND IDRELASCOPEPLOTS = RELASCOPEPLOTS.ID"/>
+                            </dataset>
+                            <dataset name="RELASCOPESPECIES" link="IDMNGUNIT = RELASCOPE.IDMNGUNIT AND IDM01 = RELASCOPE.IDM01 AND IDRELASCOPE = RELASCOPE.ID"/>
+                        </dataset>
+                    </dataset>
+                    <dataset name="M11" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M12" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M13" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M14" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M15" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID">
+                        <dataset name="M15A" link="IDMNGUNIT = M15.IDMNGUNIT AND IDM01 = M15.IDM01 AND IDM15 = M15.ID"/>
+                    </dataset>
+                    <dataset name="M16" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M17" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M18" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M19" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M20" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M21" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID">
+                        <dataset name="M21A" link="IDMNGUNIT = M21.IDMNGUNIT AND IDM01 = M21.IDM01 AND IDM21 = M21.ID"/>
+                    </dataset>
+                    <dataset name="M22" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M23" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M24" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M25" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M26" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M27" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M28" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M29" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M30" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M31" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                    <dataset name="M88" link="IDMNGUNIT = M01.IDMNGUNIT AND IDM01 = M01.ID"/>
+                </dataset>
+                <dataset name="M01L" link="IDMNGUNIT = MNGUNIT.ID"> 
+                    <dataset name="M04L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M08L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M09L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M13L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M15L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID">
+                        <dataset name="M15AL" link="IDMNGUNIT = M15L.IDMNGUNIT AND IDM01L = M15L.IDM01 AND IDM15L = M15L.ID" />
+                    </dataset>
+                    <dataset name="M20L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M21L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M23L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M24L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M27L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M31L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                    <dataset name="M88L" link="IDMNGUNIT = M01L.IDMNGUNIT AND IDM01L = M01L.ID"/>
+                </dataset>
+                <dataset name="NDI" link="IDMNGUNIT = MNGUNIT.ID" />
+        </dataset>
+    </section>
+    <section name="NDI">
+        <dataset name="NDI10100001" />
+        <dataset name="NDI10100002" />
+        <dataset name="NDI10100003" />
+        <dataset name="NDI10100004" />
+        <dataset name="NDI10100005" />
+        <dataset name="NDI10200001" />
+        <dataset name="NDI10200002" />
+        <dataset name="NDI10200003" />
+        <dataset name="NDI10200004" />
+        <dataset name="NDI10200005" />
+        <dataset name="NDI10200006" />
+        <dataset name="NDI10200007" />
+        <dataset name="NDI10200008_" />
+        <dataset name="NDI10200009" />
+        <dataset name="NDI10200010" />
+        <dataset name="NDI10200011" />
+        <dataset name="NDI10200012" />
+        <dataset name="NDI10200013" />
+        <dataset name="NDI10200014" />
+        <dataset name="NDI10200015" />
+        <dataset name="NDI10200016" />
+        <dataset name="NDI10200018" />
+        <dataset name="NDI10200019" />
+        <dataset name="NDI10200020" />
+        <dataset name="NDI10200022" />
+        <dataset name="NDI10200023" />
+        <dataset name="NDI10200024" />
+        <dataset name="NDI10200025" />
+        <dataset name="NDI10200026" />
+        <dataset name="NDI10200027" />
+        <dataset name="NDI10200032" />
+        <dataset name="NDI10200034" />
+        <dataset name="NDI10200036" />
+        <dataset name="NDI10200041" />
+        <dataset name="NDI10200041_MAIR" />
+        <dataset name="NDI10200041_MAIS" />
+        <dataset name="NDI10200042" />
+        <dataset name="NDI10200044" />
+        <dataset name="NDI10200045" />
+        <dataset name="NDI10200047" />
+        <dataset name="NDI10200050" />
+        <dataset name="NDI10200057" />
+        <dataset name="NDI10200063" />
+        <dataset name="NDI10200065" />
+        <dataset name="NDI10200066" />
+        <dataset name="NDI10200069" />
+        <dataset name="NDI10200070" />
+        <dataset name="NDI10200071" />
+        <dataset name="NDI10200072" />
+        <dataset name="NDI10200073" />
+        <dataset name="NDI10200074" />
+        <dataset name="NDI10200075" />
+        <dataset name="NDI10200076" />
+        <dataset name="NDI10200082" />
+        <dataset name="NDI10200090" />
+        <dataset name="NDI10300001" />
+        <dataset name="NDI10300005" />
+        <dataset name="NDI10300006" />
+        <dataset name="NDI10300007" />
+        <dataset name="NDI10300008" />
+        <dataset name="NDI10300010" />
+        <dataset name="NDI10300011" />
+        <dataset name="NDI10300012" />
+        <dataset name="NDI10300013" />
+        <dataset name="NDI10300027" />
+        <dataset name="NDI1030002829" />
+        <dataset name="NDI10300030" />
+        <dataset name="NDI10300031" />
+        <dataset name="NDI10500002" />
+        <dataset name="NDI10500003" />
+        <dataset name="NDI10600001" />
+        <dataset name="NDI10600002" />
+        <dataset name="NDI10600003" />
+        <dataset name="NDI10600031" />
+        <dataset name="NDI10600032" />
+        <dataset name="NDI10600033" />
+        <dataset name="NDI10600034" />
+        <dataset name="NDI10600037" />
+        <dataset name="NDI10600060" />
+        <dataset name="NDI10600061" />
+        <dataset name="NDI10600062" />
+        <dataset name="NDI10600063" />
+        <dataset name="NDI10600070" />
+        <dataset name="NDI10600071" />
+        <dataset name="NDI10600080" />
+        <dataset name="NDI10600081" />
+        <dataset name="NDI10600089" />
+        <dataset name="NDI10600090" />
+        <dataset name="NDI10700001" />
+        <dataset name="NDI10700002" />
+        <dataset name="NDI10800020" />
+        <dataset name="NDI10800021" />
+        <dataset name="NDI11000001" />
+        <dataset name="NDI15500002" />
+        <dataset name="NDI15500004" />
+        <dataset name="NDI15500005" />
+        <dataset name="NDI15500007" />
+        <dataset name="NDI15500007X" />
+        <dataset name="NDI15500008" />
+        <dataset name="NDI15500009" />
+        <dataset name="NDI15500010" />
+        <dataset name="NDI30101026" />
+        <dataset name="NDI30101028" />
+        <dataset name="NDI30101029" />
+        <dataset name="NDI30101030" />
+        <dataset name="NDI30101030_" />
+        <dataset name="NDI30101031" />
+        <dataset name="NDI30101031_" />
+        <dataset name="NDI30202000" />
+        <dataset name="NDI30203000" />
+        <dataset name="NDI30410000" />
+        <dataset name="NDI30420000" />
+        <dataset name="NDI30470000" />
+        <dataset name="NDI90200000" />
+    </section>
+    <section name="OTHER">
+        <dataset name="GEOMETRY_COLUMNS" />
+        <dataset name="SYSTAB_SYNCHROLOG" />
+        <dataset name="SYSTAB_SYSTEMFILES" />
+        <dataset name="QCARTOLINSYMBOLS" />
+        <dataset name="QCHECKBUFFER" />
+        <dataset name="QCOMPULSORYKAJA" />
+        <dataset name="QCOMPULSORYMAKET" />
+        <dataset name="QCOMPULSORYMAKETL" />
+        <dataset name="QCONMETHOD" />
+        <dataset name="QCONNECTIONSYMBOLS" />
+        <dataset name="QFILLSYMBOL" />
+        <dataset name="QKAJA" />
+        <dataset name="QKAKZLINSYMBOLS" />
+        <dataset name="QLEGEND" />
+        <dataset name="QLINEORIGIN" />
+        <dataset name="QLINESYMBOLS" />
+        <dataset name="QLINETYPE" />
+        <dataset name="QLINVYDELSYMBOL" />
+        <dataset name="QLINVYDILSYMBOLS" />
+        <dataset name="QM01COLORINGMODE" />
+        <dataset name="QOPTIONALKAJA" />
+        <dataset name="QOPTIONALMAKET" />
+        <dataset name="QOPTIONALMAKETL" />
+        <dataset name="QSETVISCOMPULSORYMAKET" />
+        <dataset name="QSETVISCOMPULSORYMAKETL" />
+        <dataset name="QSYMBOL" />
+        <dataset name="QYESNO" />
+        <dataset name="STRUCTURERBD" />
+    </section>
+</application>

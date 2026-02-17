@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="28e2a0eb-e556-48b2-9ec5-3254857225e0" ChangeDateTime="05/06/2025 07:21:44">
+    <Property Name="ElementName" Value="[ndi].[header].[ListID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ndi].[header]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="List" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="198c228a-fcac-4c7c-a9d1-b7a3afd33db7" ChangeDateTime="05/06/2025 07:40:31">
+    <Property Name="ElementName" Value="[ndi].[attribute].[IX_attribute_Column]" />
+    <Property Name="ElementType" Value="SqlIndex" />
+    <Property Name="ParentElementName" Value="[ndi].[attribute]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[IX_Attribute_Kind]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="66aaa5e7-1b99-4774-859c-6b33aab4e65d" ChangeDateTime="05/08/2025 08:03:45">
+    <Property Name="ElementName" Value="[ds].[structure].[Definition]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ds].[structure]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FieldsDefinition" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4c2c6d4b-55b6-4e25-97d6-0038c40e6bda" ChangeDateTime="09/01/2025 13:59:28">
+    <Property Name="ElementName" Value="[ds].[application].[Active]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ds].[application]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Status" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1d119a69-a3c2-40f3-a8d3-0ba4c5ac7736" ChangeDateTime="09/01/2025 14:28:13">
+    <Property Name="ElementName" Value="[ds].[dataset].[Active]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ds].[dataset]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Status" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="361265d1-408a-4030-950a-5853efdb24f7" ChangeDateTime="09/10/2025 15:07:54">
+    <Property Name="ElementName" Value="[ds].[MappingSet].[SourceSystemId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ds].[MappingSet]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Source" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="faf2fc4b-b441-4dba-bb30-0fa771e0e4b5" ChangeDateTime="09/10/2025 15:08:01">
+    <Property Name="ElementName" Value="[ds].[MappingSet].[TargetSystemId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ds].[MappingSet]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Target" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d287360d-e418-46ef-a6ea-2ab672c30872" ChangeDateTime="09/11/2025 09:06:59">
+    <Property Name="ElementName" Value="[ds].[relation].[Application]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ds].[relation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Parent" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7469c253-56be-4b34-b078-e2f19c1e6513" ChangeDateTime="09/11/2025 17:50:39">
+    <Property Name="ElementName" Value="[ds].[relation].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ds].[relation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Link" />
+  </Operation>
+</Operations>

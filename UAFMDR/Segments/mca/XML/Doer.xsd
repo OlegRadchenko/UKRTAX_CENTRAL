@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Doer">
+    <xs:annotation>
+      <xs:documentation>Виконавець</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Name">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="First" type="xs:string" />
+              <xs:element name="Middle" type="xs:string" />
+              <xs:element name="Last" type="xs:string" />
+              <xs:element name="Nick"  type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Organization" type="xs:string" />
+        <xs:element name="Position" type="xs:string" />
+        <xs:element name="Channels">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Name" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>      
+      </xs:sequence>      
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

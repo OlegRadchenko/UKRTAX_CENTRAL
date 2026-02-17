@@ -1,0 +1,9 @@
+<direct>
+    <dataset name="SYSTAB_DELETEDRECORDSLOG" store="ukrtax.DELETEDRECORDSLOG"/>
+    <dataset name="SYSTAB_JOURNAL" store="ukrtax.JOURNAL"/>
+    <dataset name="SYSTAB_MEASUREMENTLOG" store="ukrtax.MEASUREMENTLOG"/>
+    <dataset name="SYSTAB_OLDCHANGESLOG" store="ukrtax.OLDCHANGESLOG"/>
+    <dataset name="SYSTAB_SYNCHROLOG" store="ukrtax.SYNCHROLOG"/>
+    <dataset name="SYSTAB_SYSTEMFILES" store="ukrtax.SYSTEMFILES"/>
+    <dataset name="GEOMETRY_COLUMNS" store="ukrtax.GEOMETRY_COLUMN"/>
+</direct>

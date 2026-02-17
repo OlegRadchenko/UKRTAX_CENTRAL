@@ -1,0 +1,12 @@
+﻿CREATE TABLE [store].[DataSetRowRelation]
+(
+	[DataSetRow] INT NOT NULL REFERENCES store.DataSetRow(Id),
+	[Parent] INT NOT NULL REFERENCES store.DataSetRow(Id),
+	[_Status] TINYINT NOT NULL REFERENCES mca.status(Id) DEFAULT 1,
+	[CHANGE_SESSION] [int] NOT NULL REFERENCES mca.session(ID) DEFAULT mca.DefaultSession(),
+	[SysStart] DATETIME2 (7) GENERATED ALWAYS AS ROW START NOT NULL,
+	[SysEnd] DATETIME2 (7) GENERATED ALWAYS AS ROW END NOT NULL,
+    CONSTRAINT [PK_DataSetRowRelation] PRIMARY KEY ([DataSetRow], [Parent]),
+	PERIOD FOR SYSTEM_TIME ([SysStart], [SysEnd])
+)
+WITH (SYSTEM_VERSIONING = ON(HISTORY_TABLE=[store].[DataSetRowRelation_HISTORY], DATA_CONSISTENCY_CHECK=ON))

@@ -1,0 +1,17 @@
+﻿CREATE TABLE [ds].[Mapping]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    [Name]  NVARCHAR(128) NOT NULL,
+    [Source]  INT NOT NULL REFERENCES ds.application(Id),
+    [Target]  INT NOT NULL REFERENCES ds.application(Id),
+	[_Status] TINYINT NOT NULL DEFAULT 1,
+	[CHANGE_SESSION] [int] NOT NULL REFERENCES mca.session(ID) DEFAULT mca.DefaultSession(),
+	[SysStart] DATETIME2 (7) GENERATED ALWAYS AS ROW START NOT NULL,
+	[SysEnd] DATETIME2 (7) GENERATED ALWAYS AS ROW END NOT NULL,
+	PERIOD FOR SYSTEM_TIME ([SysStart], [SysEnd])
+)
+WITH (SYSTEM_VERSIONING = ON(HISTORY_TABLE=[ds].[Mapping_HISTORY], DATA_CONSISTENCY_CHECK=ON))
+GO
+
+CREATE UNIQUE INDEX [IX_Mapping_Source_Target] ON [ds].[Mapping] ([Source], [Target])
+GO
